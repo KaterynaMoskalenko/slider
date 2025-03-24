@@ -55,7 +55,7 @@ function addCircles() {
 // };
 
 function removeActiveClassForCircle() {
-    console.log(currentPicIndex);
+
     if (currentPicIndex < pics.length )
     arrayCircles[currentPicIndex].classList.remove('active');
 
@@ -63,6 +63,13 @@ function removeActiveClassForCircle() {
 };
 
 function addActiveClassForCircle() {
+    console.log(currentPicIndex);
+    console.log(arrayCircles.length);
+    if (currentPicIndex === pics.length-1) {
+        arrowRRight.hidden = true;
+    } else if (currentPicIndex === 0) {
+        arrowLeft.hidden =true;
+    };
     if (currentPicIndex < pics.length)
     arrayCircles[currentPicIndex].classList.add('active');
   
